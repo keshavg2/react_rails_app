@@ -1,205 +1,652 @@
-DEPRECATION WARNING: The `cache_control` argument is deprecated,replaced by `headers: { 'Cache-Control' => {:index=>"index", :headers=>{}} }`,  and will be removed in Rails 5.1. (called from <top (required)> at /home/this/rails-react-auth/server/config/environment.rb:5)
-DEPRECATION WARNING: The `cache_control` argument is deprecated,replaced by `headers: { 'Cache-Control' => {:index=>"index", :headers=>{}} }`,  and will be removed in Rails 5.1. (called from <top (required)> at /home/this/rails-react-auth/server/config/environment.rb:5)
-Started POST "/auth/sign_in" for ::1 at 2022-05-21 18:40:53 +0530
-DEPRECATION WARNING: The `cache_control` argument is deprecated,replaced by `headers: { 'Cache-Control' => {:index=>"index", :headers=>{}} }`,  and will be removed in Rails 5.1. (called from <top (required)> at /home/this/rails-react-auth/server/config/environment.rb:5)
-Started GET "/auth/sign_up" for ::1 at 2022-05-22 08:12:41 +0530
+Started POST "/sessions?email=keshavgupta9906@gmail.com&password=[FILTERED]" for ::1 at 2022-06-04 17:13:16 +0530
   
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-        bin/rails db:migrate RAILS_ENV=development
-
+ActiveRecord::NoDatabaseError (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "this" does not exist
 ):
   
-activerecord (5.0.7.2) lib/active_record/migration.rb:573:in `check_pending!'
-activerecord (5.0.7.2) lib/active_record/migration.rb:549:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
-activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
-activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
-activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.8) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
 rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
 puma (3.12.6) lib/puma/configuration.rb:227:in `call'
 puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to DeviseCreateUsers (20161119222935)
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_users_on_email' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_users_on_email' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
-  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161119222935"]]
-  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-22 02:43:14.786536"], ["updated_at", "2022-05-22 02:43:14.786536"]]
-  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_users_on_reset_password_token' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_users_on_reset_password_token' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_users_on_email' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_users_on_email' AND type='index'
-[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jhondoe@example.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jhondoe@example.com"], ["encrypted_password", "$2a$11$2U04nCe01tpukIMi8ChuN.YKVU9gaKnzPehNT4pcdJhvPxAk0t45a"], ["created_at", "2022-05-22 02:43:39.068263"], ["updated_at", "2022-05-22 02:43:39.068263"]]
-  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jhondoe@example.com"], ["LIMIT", 1]]
-  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
-Started GET "/auth/sign_up" for ::1 at 2022-05-22 08:16:18 +0530
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/logged_in" for ::1 at 2022-06-04 17:50:01 +0530
   
-ActionController::RoutingError (No route matches [GET] "/auth/sign_up"):
+ActiveRecord::NoDatabaseError (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "this" does not exist
+):
   
-actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.8) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
 rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
 puma (3.12.6) lib/puma/configuration.rb:227:in `call'
 puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:16:27 +0530
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"17bcs029@smvdu.ac.in", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "17bcs029@smvdu.ac.in"], ["LIMIT", 1]]
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "17bcs029@smvdu.ac.in"], ["encrypted_password", "$2a$11$BUtnD2lH0Ut1ByYLQVQ64.a4mOEuoNPv1o6Q185aRZLCsIFG.DpPO"], ["created_at", "2022-05-22 02:46:27.161319"], ["updated_at", "2022-05-22 02:46:27.161319"]]
-  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
-Completed 500 Internal Server Error in 175ms (ActiveRecord: 12.5ms)
+Started POST "/registrations" for ::1 at 2022-06-04 17:50:35 +0530
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "this" does not exist
+):
+  
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.8) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logged_in" for ::1 at 2022-06-04 17:52:43 +0530
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "this" does not exist
+):
+  
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.8) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/sessions?email=keshavgupta9906@gmail.com&password=[FILTERED]" for ::1 at 2022-06-04 17:53:54 +0530
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "this" does not exist
+):
+  
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.8) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.8) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4968253220468789265)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190309173632)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190309173632_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190309173632"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-04 12:34:21.244852"], ["updated_at", "2022-06-04 12:34:21.244852"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4968253220468789265)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/logged_in" for ::1 at 2022-06-04 18:06:57 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/this/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/registrations" for ::1 at 2022-06-04 18:07:22 +0530
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:3
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keshav.gupta@jarvis.consulting"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/registrations_controller.rb:3
+Completed 422 Unprocessable Entity in 235ms (ActiveRecord: 6.8ms)
 
 
   
-NameError (undefined local variable or method `data' for #<AuthController:0x000055820d4c8e90>):
+ActiveRecord::RecordInvalid (Validation failed: Password confirmation doesn't match Password):
   
-app/controllers/auth_controller.rb:16:in `sign_up'
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:17:12 +0530
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"17bcs029@smvdu.ac.in", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "17bcs029@smvdu.ac.in"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
-Completed 422 Unprocessable Entity in 123ms (ActiveRecord: 0.8ms)
+app/controllers/registrations_controller.rb:3:in `create'
+Started POST "/registrations" for ::1 at 2022-06-04 18:08:46 +0530
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:3
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keshav.gupta@jarvis.consulting"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "keshav.gupta@jarvis.consulting"], ["password_digest", "$2a$12$6UM5pi1ejar3EcNCA/2X1uNzfESCOfyZ42oGHURRvTJ67.x6ia82."], ["created_at", "2022-06-04 12:38:46.267431"], ["updated_at", "2022-06-04 12:38:46.267431"]]
+  ↳ app/controllers/registrations_controller.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:3
+Completed 200 OK in 226ms (Views: 0.4ms | ActiveRecord: 2.6ms)
 
 
+Started POST "/set_email" for ::1 at 2022-06-04 18:09:10 +0530
   
-ActiveRecord::RecordInvalid (Validation failed: Email has already been taken):
+ActionController::RoutingError (No route matches [POST] "/set_email"):
   
-app/controllers/auth_controller.rb:15:in `sign_up'
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:48:02 +0530
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"keshav@gmail.com", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "keshav@gmail.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "keshav@gmail.com"], ["encrypted_password", "$2a$11$TGL77k/aNTFKbYiopvZhZeYr6ICXbcaNBzOXwhefH0RtN6GJrISla"], ["created_at", "2022-05-22 03:18:02.350390"], ["updated_at", "2022-05-22 03:18:02.350390"]]
-  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
-Completed 500 Internal Server Error in 186ms (ActiveRecord: 12.4ms)
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/set_email?email=keshav.gupta@jarvis.consulting" for ::1 at 2022-06-04 23:58:26 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/this/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SendMailController#send_mail as */*
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting"}
+UserMailer#send_email: processed outbound mail in 102.5ms
+Sent mail to keshav.gupta@jarvis.consulting (121361.0ms)
+Date: Sat, 04 Jun 2022 23:58:26 +0530
+From: hello@mydomail.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629ba44a74c68_5f162ae4e30239e0935b3@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+No template found for SendMailController#send_mail, rendering head :no_content
+Completed 204 No Content in 121595ms (ActiveRecord: 0.0ms)
 
 
-  
-NameError (undefined local variable or method `data' for #<AuthController:0x000055c0bf103918>):
-  
-app/controllers/auth_controller.rb:16:in `sign_up'
-Started POST "/auth/sign_in" for ::1 at 2022-05-22 08:49:30 +0530
-Processing by AuthController#sign_in as */*
-  Parameters: {"email"=>"17bcs029@smvdu.ac.in", "password"=>"[FILTERED]"}
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "17bcs029@smvdu.ac.in"], ["LIMIT", 1]]
-Completed 200 OK in 103ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+Started POST "/set_email?email=keshav.gupta@jarvis.consulting" for ::1 at 2022-06-05 00:08:42 +0530
+Processing by SendMailController#send_mail as */*
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting"}
+UserMailer#send_email: processed outbound mail in 0.7ms
+Sent mail to keshav.gupta@jarvis.consulting (121462.8ms)
+Date: Sun, 05 Jun 2022 00:08:42 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629ba6b2b6624_5f162ae4e3023a6c93666@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 121470ms (Views: 0.8ms | ActiveRecord: 0.0ms)
 
 
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:59:06 +0530
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"keshav@gmail.com", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "keshav@gmail.com"], ["LIMIT", 1]]
-  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
-Completed 422 Unprocessable Entity in 112ms (ActiveRecord: 0.7ms)
+Started POST "/set_email" for ::1 at 2022-06-05 00:14:54 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 1.9ms
+Started POST "/set_email" for ::1 at 2022-06-05 00:15:10 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 0.8ms
+Started GET "/logged_in" for ::1 at 2022-06-05 00:15:41 +0530
+Sent mail to keshav.gupta@jarvis.consulting (120099.0ms)
+Date: Sun, 05 Jun 2022 00:14:54 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629ba82690a83_5f162ae4e30239e0937c3@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120103ms (Views: 0.2ms | ActiveRecord: 0.0ms)
 
 
-  
-ActiveRecord::RecordInvalid (Validation failed: Email has already been taken):
-  
-app/controllers/auth_controller.rb:15:in `sign_up'
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:59:18 +0530
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"keshav1@gmail.com", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "keshav1@gmail.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "keshav1@gmail.com"], ["encrypted_password", "$2a$11$Kc2kXRZjuFXyt7A0ozkue.V/ynB5fHTXr084I4knOsxaom9cwqN6S"], ["created_at", "2022-05-22 03:29:18.500368"], ["updated_at", "2022-05-22 03:29:18.500368"]]
-  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
-Completed 500 Internal Server Error in 154ms (ActiveRecord: 12.1ms)
+Sent mail to keshav.gupta@jarvis.consulting (120106.5ms)
+Date: Sun, 05 Jun 2022 00:15:10 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629ba836d13e8_5f162ae4e30238149384f@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120109ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
 
-  
-NameError (undefined local variable or method `data' for #<AuthController:0x000055c0be12fc30>):
-  
-app/controllers/auth_controller.rb:16:in `sign_up'
-Started POST "/auth/sign_up" for ::1 at 2022-05-22 08:59:52 +0530
-Processing by AuthController#sign_up as */*
-  Parameters: {"email"=>"keshav2@gmail.com", "password"=>"[FILTERED]"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "keshav2@gmail.com"], ["LIMIT", 1]]
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "keshav2@gmail.com"], ["encrypted_password", "$2a$11$l/muP/xTERHr5mERUw5PVuRuVdesoeueyLw4QqxBHLL7nZ3qXP1Wq"], ["created_at", "2022-05-22 03:29:52.681369"], ["updated_at", "2022-05-22 03:29:52.681369"]]
-  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
-Completed 200 OK in 139ms (Views: 1.6ms | ActiveRecord: 14.0ms)
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/sessions" for ::1 at 2022-06-05 15:59:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keshav.gupta@jarvis.consulting"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 200 OK in 214ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-05 15:59:33 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 1.9ms
+Sent mail to keshav.gupta@jarvis.consulting (120103.1ms)
+Date: Sun, 05 Jun 2022 15:59:33 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c858d98b3c_5f162ae4e3023a6c939dc@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120109ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-05 16:04:01 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 1.2ms
+Sent mail to keshav.gupta@jarvis.consulting (120395.0ms)
+Date: Sun, 05 Jun 2022 16:04:01 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c86997333d_5f162ae4e3023814940be@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120398ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-05 16:13:06 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/this/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 99.0ms
+Sent mail to keshav.gupta@jarvis.consulting (120100.3ms)
+Date: Sun, 05 Jun 2022 16:13:06 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c88bad6f7e_a3632ad243d2d69880414@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120256ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-05 16:15:23 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 1.3ms
+Sent mail to keshav.gupta@jarvis.consulting (120114.5ms)
+Date: Sun, 05 Jun 2022 16:15:23 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c89435254f_a3632ad243d2d60c805c4@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120119ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-05 16:23:41 +0530
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-05 16:23:59 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 8ae145f1-d6b5-4a78-8539-f11ab1e0c492) to Async(mailers) with arguments: "UserMailer", "send_email", "deliver_now", {:email=>"keshav.gupta@jarvis.consulting"}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8ae145f1-d6b5-4a78-8539-f11ab1e0c492] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 8ae145f1-d6b5-4a78-8539-f11ab1e0c492) from Async(mailers) with arguments: "UserMailer", "send_email", "deliver_now", {:email=>"keshav.gupta@jarvis.consulting"}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8ae145f1-d6b5-4a78-8539-f11ab1e0c492] UserMailer#send_email: processed outbound mail in 1.0ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8ae145f1-d6b5-4a78-8539-f11ab1e0c492] Sent mail to keshav.gupta@jarvis.consulting (121163.7ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8ae145f1-d6b5-4a78-8539-f11ab1e0c492] Date: Sun, 05 Jun 2022 16:23:59 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c8b4748917_a3632ad243b76ae8806f2@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8ae145f1-d6b5-4a78-8539-f11ab1e0c492] Performed ActionMailer::Parameterized::DeliveryJob (Job ID: 8ae145f1-d6b5-4a78-8539-f11ab1e0c492) from Async(mailers) in 121167.48ms
+Started POST "/set_email" for ::1 at 2022-06-05 16:28:07 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 0.6ms
+Sent mail to keshav.gupta@jarvis.consulting (120922.8ms)
+Date: Sun, 05 Jun 2022 16:28:07 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629c8c3fc304_a3632ad243d2d69880781@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 120929ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-06 10:02:32 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/this/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+Completed 200 OK in 14ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/set_email" for ::1 at 2022-06-06 10:02:37 +0530
+Processing by SendMailController#send_mail as HTML
+  Parameters: {"email"=>"keshav.gupta@jarvis.consulting", "send_mail"=>{"email"=>"keshav.gupta@jarvis.consulting"}}
+UserMailer#send_email: processed outbound mail in 107.4ms
+Sent mail to keshav.gupta@jarvis.consulting (822.8ms)
+Date: Mon, 06 Jun 2022 10:02:37 +0530
+From: hello@mydomain.com
+To: keshav.gupta@jarvis.consulting
+Message-ID: <629d836530f8e_be5a2ac1868a7c6885685@this-Latitude-3490.mail>
+Subject: Referral email
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Go to this link http://localhost:3000
+Completed 200 OK in 1003ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-06 10:03:29 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/this/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-06-06 10:03:31 +0530
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:10
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2022-06-06 10:03:34 +0530
+Processing by SessionsController#logout as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-06 10:03:44 +0530
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-06 10:03:54 +0530
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2022-06-06 10:04:02 +0530
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2022-06-06 10:04:42 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"keshav.gupta@jarvis.consulting", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keshav.gupta@jarvis.consulting"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 200 OK in 205ms (Views: 0.4ms | ActiveRecord: 0.4ms)
 
 

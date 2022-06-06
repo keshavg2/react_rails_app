@@ -12,11 +12,9 @@ import "./style/main.scss";
 
 function main() {
   ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
-      <BrowserRouter>
+     <Provider store={createStoreWithMiddleware(reducers)}>
         <App />
-      </BrowserRouter>
-    </Provider>,
+     </Provider>,
     document.querySelector(".app-wrapper")
   );
 }

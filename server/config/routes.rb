@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post 'auth/sign_in', to: 'auth#sign_in'
-
-  post 'auth/sign_up', to: 'auth#sign_up'
-
-  get '/member-only', to: 'test#members_only'
-
-  root to: 'test#members_only'
+  resources :sessions, only: [:create]
+  resources :registrations, only: [:create]
+  post 'set_email' => 'send_mail#send_mail'
+  delete :logout, to: "sessions#logout"
+  get :logged_in, to: "sessions#logged_in"
+  root to: "static#home"
 end
